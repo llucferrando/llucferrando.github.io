@@ -2,8 +2,8 @@
 [data-theme="dark"],
 .dark {
   /* Primary Brand Colors (Flowing Orange) */
-  --accent: #FF8A4C;
-  --accent-dark: #F97316;
+  --accent: #568cff;
+  --accent-dark: #3d7aff;
   --accent-rgb: 255, 138, 76;
 
   /* Neutral Colors */

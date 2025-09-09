@@ -33,12 +33,12 @@ import figmaLogo from '../assets/logos/Figma-logo.svg';
     <script type="application/ld+json" set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'Site Author',
+      name: 'Lluc Ferrando',
       url: new URL('/', Astro.site).toString(),
       logo: new URL('/favicon.svg', Astro.site).toString(),
       sameAs: [
         'https://x.com/guihubie',
-        'https://www.linkedin.com/in/guilherme-hubie/',
+        'https://www.linkedin.com/in/llucferrando/',
       ],
     })} />
 	</head>
@@ -56,7 +56,7 @@ import figmaLogo from '../assets/logos/Figma-logo.svg';
 
     <section class="py-6">
       <ArrowSeparator />
-      <SkillsSection title="Skills & Tools" skills={skills} />   
+      <SkillsSection title="Skills" skills={skills} />   
       <ArrowSeparator />
       <WorkExperience title="Work Experience" items={work} />
       <ArrowSeparator />
