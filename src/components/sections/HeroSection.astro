@@ -1,8 +1,10 @@
 ---
 import Button from "../ui/button/Button.astro";
+
 interface Cta {
   text: string;
   href: string;
+  download?:Cta;
 }
 
 interface Props {
@@ -11,6 +13,8 @@ interface Props {
   showCTA?: boolean;
   primaryCTA?: Cta;
   secondaryCTA?: Cta;
+  
+
 }
 
 const {
@@ -18,7 +22,8 @@ const {
   subtitle,
   showCTA = false,
   primaryCTA,
-  secondaryCTA
+  secondaryCTA,
+  
 } = Astro.props as Props;
 ---
 
@@ -40,6 +45,8 @@ const {
         {secondaryCTA && (
           <Button href={secondaryCTA.href} variant="secondary" size="md">{secondaryCTA.text}</Button>
         )}
+
+        
       </div>
     )}
   </div>

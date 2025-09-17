@@ -1,0 +1,36 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+
+import Header from '../components/sections/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import HeroSection from '../components/sections/HeroSection.astro';
+
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark" class="dark">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      
+    })} />
+	</head>
+	<body>
+		<Header />
+		<main>
+      <HeroSection
+        title="Contact Me"
+        subtitle="I'm building this web, final version soon"
+        showCTA
+        primaryCTA={{ text: 'Contact', href: '/portfolio' }}
+        secondaryCTA={{ text: 'CV', href: '/blog' }}
+        
+      />
+     
+
+   
+    </section>
+		</main>
+		
+	</body>
+</html>

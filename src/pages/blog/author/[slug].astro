@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseHead from '../../../components/BaseHead.astro';
 import Header from '../../../components/sections/Header.astro';
-import Footer from '../../../components/sections/Footer.astro';
+
 import PostCard from '../../../components/ui/card/PostCard.astro';
 import { slugifyTag as slugify } from '../../../lib/slug';
 
@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   const posts = await getCollection('blog');
   const authorSlugs = [
     ...new Set(
-      posts.map((p) => slugify(p.data.author || 'Site Author'))
+      posts.map((p) => slugify(p.data.author || 'Lluc'))
     ),
   ];
   return authorSlugs.map((slug) => ({ params: { slug } }));
@@ -34,7 +34,7 @@ const authorName = posts[0]?.data.author || 'Lluc Ferrando';
         ))}
       </div>
     </main>
-    <Footer />
+    
   </body>
 </html>
 

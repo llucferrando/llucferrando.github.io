@@ -1,6 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/sections/Footer.astro';
+
 import Header from '../components/sections/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import HeroSection from '../components/sections/HeroSection.astro';
@@ -29,41 +29,28 @@ import figmaLogo from '../assets/logos/Figma-logo.svg';
 <html lang="en" data-theme="dark" class="dark">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <!-- JSON-LD: Organization -->
+   
     <script type="application/ld+json" set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Lluc Ferrando',
-      url: new URL('/', Astro.site).toString(),
-      logo: new URL('/favicon.svg', Astro.site).toString(),
-      sameAs: [
-        'https://x.com/guihubie',
-        'https://www.linkedin.com/in/llucferrando/',
-      ],
+      
+      
     })} />
 	</head>
 	<body>
 		<Header />
 		<main>
       <HeroSection
-        title="Your Headline Goes Here!"
-        subtitle="I build softwares that brings you loyal subscribers."
+        title="Web in maintenance"
+        subtitle="I'm building this web, final version soon"
         showCTA
-        primaryCTA={{ text: 'View Projects', href: '/portfolio' }}
-        secondaryCTA={{ text: 'Read Blog', href: '/blog' }}
+        primaryCTA={{ text: 'Contact', href: '/portfolio' }}
+        secondaryCTA={{ text: 'CV', href: '/blog' }}
+        
       />
      
 
-    <section class="py-6">
-      <ArrowSeparator />
-      <SkillsSection title="Skills" skills={skills} />   
-      <ArrowSeparator />
-      <WorkExperience title="Work Experience" items={work} />
-      <ArrowSeparator />
-      <Studies title="Studies" items={studies} />
-      <GlowLineSeparator />
+   
     </section>
 		</main>
-		<Footer />
+		
 	</body>
 </html>

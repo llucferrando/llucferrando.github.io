@@ -36,7 +36,7 @@ const { title, description, pubDate, updatedDate, heroImage, showHeader = true, 
 		  image: Astro.props.heroImage ? new URL(Astro.props.heroImage.src, Astro.site).toString() : undefined,
 		  datePublished: pubDate ? new Date(pubDate).toISOString() : undefined,
 		  dateModified: updatedDate ? new Date(updatedDate).toISOString() : undefined,
-		  author: [{ '@type': 'Person', name: Astro.props.author || 'Site Author' }],
+		  author: [{ '@type': 'Person', name: Astro.props.author || 'Lluc Ferrando' }],
 		  publisher: { '@type': 'Organization', name: 'guihubie.com' },
 		  mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).toString(),
 		  url: new URL(Astro.url.pathname, Astro.site).toString(),
@@ -129,6 +129,6 @@ const { title, description, pubDate, updatedDate, heroImage, showHeader = true, 
                 </div>
 			</article>
 		</main>
-		<Footer />
+	
 	</body>
 </html>
