@@ -36,12 +36,12 @@ const { title, description, pubDate, updatedDate, heroImage, showHeader = true, 
 		  image: Astro.props.heroImage ? new URL(Astro.props.heroImage.src, Astro.site).toString() : undefined,
 		  datePublished: pubDate ? new Date(pubDate).toISOString() : undefined,
 		  dateModified: updatedDate ? new Date(updatedDate).toISOString() : undefined,
-		  author: [{ '@type': 'Person', name: Astro.props.author || 'Lluc Ferrando' }],
+		  author: [{ '@type': 'Person', name:'Lluc Ferrando' }],
 		  publisher: { '@type': 'Organization', name: 'guihubie.com' },
 		  mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).toString(),
 		  url: new URL(Astro.url.pathname, Astro.site).toString(),
 		})} />
-
+    
 		<!-- JSON-LD: Breadcrumbs -->
 		<script type="application/ld+json" set:html={JSON.stringify({
 		  '@context': 'https://schema.org',
@@ -123,7 +123,7 @@ const { title, description, pubDate, updatedDate, heroImage, showHeader = true, 
                         </div>
                     )}
                     <ShareButtons title={title} url={Astro.url.toString()} />
-					<PostMeta pubDate={pubDate} readingTimeMin={readingTimeMin} authorName={Astro.props.author || 'Site Author'} />
+					<PostMeta pubDate={pubDate} readingTimeMin={readingTimeMin} authorName={Astro.props.author} />
                     <slot />
                     <PostNav prev={prevPost} next={nextPost} />
                 </div>

@@ -1,26 +1,20 @@
 ---
 interface Props {
-  variant?: 'primary' | 'secondary' | 'ghost' | 'outline' ;
-  size?: 'sm' | 'md' | 'lg';
-  href?: string;
-  type?: 'button' | 'submit' | 'reset';
-  disabled?: boolean;
-  class?: string;
-  download?:boolean;
+   href: string;
+   filename?:string;
+   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
+   size?: 'sm' | 'md' |  'lg';
+   class?: string;
 }
 
-const {
-  variant = 'primary',
-  size = 'md',
-  href,
-  type = 'button',
-  disabled = false,
-  class: className,
-  download,
+const{
+    href,
+    filename,
+    variant ='primary',
+    size='md',
+    class: className,
   ...rest
-} = Astro.props as Props;
-
-const Tag = href ? 'a' : 'button';
+    }=Astro.props as Props;
 
 const base = 'inline-flex items-center justify-center rounded-lg font-semibold starwind-transition-colors no-underline';
 const sizes: Record<string, string> = {
@@ -28,6 +22,7 @@ const sizes: Record<string, string> = {
   md: 'px-4 py-2.5 text-base',
   lg: 'px-5 py-3 text-lg',
 };
+
 const variants: Record<string, string> = {
   primary: 'text-white !text-white hover:!text-white focus:!text-white active:!text-white bg-[var(--primary)] hover:opacity-90 shadow-sm',
   secondary: 'text-[var(--accent)] border border-[var(--accent)] bg-transparent hover:bg-[color:var(--color-accent-bg)]',
@@ -38,15 +33,11 @@ const variants: Record<string, string> = {
 const classes = [base, sizes[size], variants[variant], className].filter(Boolean).join(' ');
 ---
 
-<Tag
-  class={classes}
+<a
   href={href}
-  type={!href ? type : undefined}
-  aria-disabled={disabled ? 'true' : undefined}
-  download={href && download ? download : undefined}
+  class={classes}
+  download={filename ? filename : ''}
   {...rest}
 >
   <slot />
-</Tag>
-
-
+</a>

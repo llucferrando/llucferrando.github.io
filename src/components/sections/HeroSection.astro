@@ -1,10 +1,12 @@
 ---
 import Button from "../ui/button/Button.astro";
+import DownloadButton from "../ui/button/DownloadButton.astro";
+import ArrowSeparator from "../ui/separator/ArrowSeparator.astro";
 
 interface Cta {
   text: string;
   href: string;
-  download?:Cta;
+  download?:boolean;
 }
 
 interface Props {
@@ -40,12 +42,13 @@ const {
     {showCTA && (primaryCTA || secondaryCTA) && (
       <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
         {primaryCTA && (
-          <Button href={primaryCTA.href} variant="primary" size="md">{primaryCTA.text}</Button>
+          <Button href={primaryCTA.href} variant="primary" size="md" >{primaryCTA.text}</Button>
         )}
+        
         {secondaryCTA && (
-          <Button href={secondaryCTA.href} variant="secondary" size="md">{secondaryCTA.text}</Button>
+          <DownloadButton href={secondaryCTA.href} variant="secondary" size="md"> {secondaryCTA.text} </DownloadButton>
         )}
-
+      
         
       </div>
     )}
