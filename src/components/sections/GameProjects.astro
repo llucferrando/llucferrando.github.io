@@ -1,0 +1,45 @@
+---
+import Button from "../ui/button/Button.astro";
+import DownloadButton from "../ui/button/DownloadButton.astro";
+import ArrowSeparator from "../ui/separator/ArrowSeparator.astro";
+import ToggleButton from "../ui/button/ToggleButton.astro"; 
+
+interface Cta {
+  text: string;
+  href?: string;        // opcional (para enlaces normales)
+  targetId?: string;    // opcional (para toggles)
+  download?: boolean;
+  variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+}
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  showCTA?: boolean;
+  primaryCTA?: Cta;
+  secondaryCTA?: Cta;
+}
+
+const {
+  title,
+  subtitle,
+  
+
+} = Astro.props as Props;
+---
+
+<section class="w-full py-6 md:py-10">
+  <div class="mx-auto max-w-5xl px-4 text-center">
+    <h1 class="text-4xl md:text-10xl font-extrabold tracking-tight text-foreground">
+      <span class="bg-gradient-to-r from-[var(--accent)] to-[var(--accent-dark)] bg-clip-text text-transparent">
+        {title}
+      </span>
+    </h1>
+    {subtitle && (
+      <p class="mt-4 text-lg md:text-xl text-[color:var(--color-text-secondary)] max-w-2xl mx-auto">
+        {subtitle}
+      </p>
+    )}
+    
+</section>

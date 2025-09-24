@@ -1,33 +1,26 @@
 ---
 interface Props {
-  variant?: 'primary' | 'secondary' | 'ghost' | 'outline' ;
+  targetId: string;   
+  variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
-  href?: string;
-  type?: 'button' | 'submit' | 'reset';
-  disabled?: boolean;
   class?: string;
-  download?:boolean;
 }
 
 const {
+  targetId,
   variant = 'primary',
   size = 'md',
-  href,
-  type = 'button',
-  disabled = false,
   class: className,
-  download,
   ...rest
 } = Astro.props as Props;
 
-const Tag = href ? 'a' : 'button';
-
-const base = 'inline-flex items-center justify-center rounded-lg font-semibold starwind-transition-colors no-underline';
+const base = 'inline-flex items-center justify-center rounded-lg font-semibold starwind-transition-colors no-underline cursor-pointer';
 const sizes: Record<string, string> = {
   sm: 'px-3 py-2 text-sm',
   md: 'px-4 py-2.5 text-base',
-  lg: 'px-10 py-5 text-lg',
+  lg: 'px-5 py-3 text-lg',
 };
+
 const variants: Record<string, string> = {
   primary: 'text-white !text-white hover:!text-white focus:!text-white active:!text-white bg-[var(--primary)] hover:opacity-90 shadow-sm',
   secondary: 'text-[var(--accent)] border border-[var(--accent)] bg-transparent hover:bg-[color:var(--color-accent-bg)]',
@@ -38,15 +31,24 @@ const variants: Record<string, string> = {
 const classes = [base, sizes[size], variants[variant], className].filter(Boolean).join(' ');
 ---
 
-<Tag
+
+
+<button
+  type="button"
   class={classes}
-  href={href}
-  type={!href ? type : undefined}
-  aria-disabled={disabled ? 'true' : undefined}
-  download={href && download ? download : undefined}
-  {...rest}
+  onclick={`(function(){
+    // cerramos todas las secciones
+    document.querySelectorAll('[data-section]').forEach((section) => {
+      if (section.id !== '${targetId}') {
+        section.classList.add('hidden');
+      }
+    });
+
+    // togglear solo la propia
+    const el = document.getElementById('${targetId}');
+    if (el) el.classList.toggle('hidden');
+  })()`}
 >
   <slot />
-</Tag>
-
+</button>
 

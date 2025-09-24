@@ -5,7 +5,7 @@ import { slugifyTag as slugify } from '../../../lib/slug';
 
 interface Props {
   pubDate: Date;
-  readingTimeMin: number;
+  readingTimeMin?: number;
   authorName?: string;
 }
 const { pubDate, readingTimeMin, authorName } = Astro.props as Props;
