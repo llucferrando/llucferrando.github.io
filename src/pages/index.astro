@@ -4,6 +4,7 @@ import {SOCIAL_MEDIA} from '../consts';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import Header from '../components/sections/Header.astro';
 import HeroSection from '../components/sections/HeroSection.astro';
+import Footer from '@/components/sections/Footer.astro';
 import SkillsSection from '../components/sections/SkillsSection.astro';
 import ArrowSeparator from '../components/ui/separator/ArrowSeparator.astro'
 import GlowLineSeparator from '../components/ui/separator/GlowLineSeparator.astro'
@@ -28,7 +29,7 @@ import figmaLogo from '../assets/logos/Figma-logo.svg';
       '@type': 'Organization',
       name: 'Lluc Ferrando',
       url: new URL('https://www.llucferrando.github.io', Astro.site).toString(),
-      logo: new URL('/favicon.svg', Astro.site).toString(),
+      logo: new URL('/logoPersonal2.svg', Astro.site).toString(),
       sameAs: [
         SOCIAL_MEDIA.instagram,
         SOCIAL_MEDIA.linkedin,
@@ -50,6 +51,8 @@ import figmaLogo from '../assets/logos/Figma-logo.svg';
 
    
     </section>
+    <GlowLineSeparator></GlowLineSeparator>
+    <Footer> </Footer>
 		</main>
 		
 	</body>

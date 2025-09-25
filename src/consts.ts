@@ -6,7 +6,8 @@ export const SITE_DESCRIPTION = 'Game engineering, code projects, and video game
 export const SOCIAL_MEDIA={
     instagram: 'https://www.instagram.com/llucferrando/',
     linkedin:'https://www.linkedin.com/in/llucferrandojorda/',
-    github: 'https://github.com/llucferrando/'
+    github: 'https://github.com/llucferrando/',
+    x:'https://x.com/NotLluki'
 }
 
 
