@@ -1,10 +1,10 @@
 ---
 title: 'Example Post Four'
-description: 'Showcase image layout and card behavior.'
+description: 'Sample article demonstrating tags, categories, and reading time.'
 pubDate: 'Aug 12 2025'
-heroImage: '../../assets/images/example-blog-hero4.jpg'
+heroImage: '../../assets/images/example-blog-hero1.jpg'
 category: 'Engineering'
-tags: ['template']
+tags: ['OpenGL', 'C++', CleanCode, Engine Motor]
 ---
 
 Use this post to verify pagination and the featured card on the blog index.

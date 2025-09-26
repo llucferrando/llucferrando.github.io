@@ -1,10 +1,10 @@
 ---
 title: 'Example Post Three'
-description: 'Placeholder copy for template testing.'
+description: 'Sample article demonstrating tags, categories, and reading time.'
 pubDate: 'Aug 10 2025'
-heroImage: '../../assets/images/example-blog-hero3.jpg'
+heroImage: '../../assets/images/example-blog-hero2.jpg'
 category: 'Design'
-tags: ['demo']
+tags: ['OpenGL', 'C++', CleanCode, Engine Motor]
 ---
 
 Short sample content. Replace with your own.

@@ -1,10 +1,10 @@
 ---
-title: 'Real-Time Lighting'
-description: 'Sample article demonstrating tags, categories, and reading time.'
+title: 'Rabid Rabbit'
+description: 'Sample article demonstrating the blog layout, cards, and meta.'
 pubDate: 'Aug 12 2025'
 heroImage: '../../assets/images/example-blog-hero1.jpg'
 category: 'Showcase'
-tags: ['OpenGL', 'C++', CleanCode, Engine Motor]
+tags: ['template', 'demo']
 ---
 
 This is a sample article used in the starter template. Replace it with your own content.
