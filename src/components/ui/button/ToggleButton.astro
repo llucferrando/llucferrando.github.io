@@ -37,17 +37,26 @@ const classes = [base, sizes[size], variants[variant], className].filter(Boolean
   type="button"
   class={classes}
   onclick={`(function(){
-    // cerramos todas las secciones
-    document.querySelectorAll('[data-section]').forEach((section) => {
-      if (section.id !== '${targetId}') {
-        section.classList.add('hidden');
-      }
-    });
+  // Cerramos todas las secciones de proyectos
+  document.querySelectorAll('[data-section]').forEach((section) => {
+    if (section.id !== '${targetId}') {
+      section.classList.add('hidden');
+    }
+  });
 
-    // togglear solo la propia
-    const el = document.getElementById('${targetId}');
-    if (el) el.classList.toggle('hidden');
-  })()`}
+  // Togglear solo la sección seleccionada
+  const el = document.getElementById('${targetId}');
+  if (el) el.classList.toggle('hidden');
+
+  // Mostrar/ocultar separator + footer
+  const extras = document.getElementById('extras');
+  if (el && !el.classList.contains('hidden')) {
+    extras?.classList.remove('hidden'); // mostrar cuando hay sección activa
+  } else {
+    extras?.classList.add('hidden'); // ocultar si no hay sección activa
+  }
+})()`}
+
 >
   <slot />
 </button>
