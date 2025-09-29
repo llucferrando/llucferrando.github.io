@@ -1,7 +1,7 @@
 ---
-title: 'Example Post Four'
+title: '3D Shaders - HLSL'
 description: 'Sample article demonstrating tags, categories, and reading time.'
-pubDate: 'Aug 12 2025'
+pubDate: 'Aug 08 2025'
 heroImage: '../../assets/images/example-blog-hero1.jpg'
 category: 'Engineering'
 tags: ['OpenGL', 'C++', CleanCode, Engine Motor]

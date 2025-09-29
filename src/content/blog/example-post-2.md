@@ -1,10 +1,10 @@
 ---
-title: 'Example Post Two'
-description: 'Sample article demonstrating tags, categories, and reading time.'
-pubDate: 'Aug 14 2025'
+title: 'Companion APP'
+description: 'Companion APP concept for Call Of Duty'
+pubDate: 'Aug 08 2025'
 heroImage: '../../assets/images/example-blog-hero2.jpg'
 category: 'Showcase'
-tags: ['OpenGL', 'C++', CleanCode, Engine Motor]
+tags: ['Kotlin', 'JavaScript', Android Studio, API, ]
 ---
 
 Another placeholder article. Use this to preview list pages (author, tag, category) and RSS.

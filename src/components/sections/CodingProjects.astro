@@ -8,7 +8,7 @@ import PostCard from "../ui/card/PostCard.astro";
 import { getCollection } from "astro:content";
 
 const posts = await getCollection('blog');
-const [firstPost,secondPost,thirdPost,fourthPost] = posts.slice(0,4);
+const [firstPost,secondPost,thirdPost,fourthPost, fifthPost, sixthPost] = posts.slice(0,6);
 
 interface Props {
   title?: string;
@@ -34,14 +34,16 @@ const {title, subtitle} = Astro.props as Props;
     
   </div>
   <section class="w-full flex items-center justify-center">
-      <div id="gameCards" class=" blog-grid-8 flex gap-6">
-        {firstPost && <PostCard post={firstPost}/>}
-        {secondPost && <PostCard post={secondPost}/>}
-        {thirdPost && <PostCard post={thirdPost}/>}
-        {fourthPost && <PostCard post={fourthPost}/>}
-        
-      </div>
-    </section>
+  <div id="gameCards" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {firstPost && <PostCard post={firstPost}/>}
+    {secondPost && <PostCard post={secondPost}/>}
+    {thirdPost && <PostCard post={thirdPost}/>}
+    {fourthPost && <PostCard post={fourthPost}/>}
+    {fifthPost && <PostCard post={fifthPost}/>}
+    {sixthPost && <PostCard post={sixthPost}/>}
+  </div>
+</section>
+
 </section>
 
 

@@ -1,7 +1,7 @@
 ---
-title: 'Example Post Five'
+title: 'Parchis Online TCP'
 description: 'Testing tags and category pages.'
-pubDate: 'Aug 13 2025'
+pubDate: 'Aug 08 2025'
 heroImage: '../../assets/images/example-blog-hero5.jpg'
 category: 'Showcase'
 tags: ['astro']

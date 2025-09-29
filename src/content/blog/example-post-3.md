@@ -1,7 +1,7 @@
 ---
-title: 'Example Post Three'
+title: 'Web Game Phaser'
 description: 'Sample article demonstrating tags, categories, and reading time.'
-pubDate: 'Aug 10 2025'
+pubDate: 'Aug 08 2025'
 heroImage: '../../assets/images/example-blog-hero2.jpg'
 category: 'Design'
 tags: ['OpenGL', 'C++', CleanCode, Engine Motor]

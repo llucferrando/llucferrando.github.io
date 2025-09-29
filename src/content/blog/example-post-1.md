@@ -1,7 +1,7 @@
 ---
-title: 'Real-Time Lighting'
-description: 'Sample article demonstrating tags, categories, and reading time.'
-pubDate: 'Aug 12 2025'
+title: 'Real-Time Lightning'
+description: 'Sample article demonstrating tags, categories, and reading time'
+pubDate: 'Aug 08 2025'
 heroImage: '../../assets/images/example-blog-hero1.jpg'
 category: 'Showcase'
 tags: ['OpenGL', 'C++', CleanCode, Engine Motor]
