@@ -1,6 +1,7 @@
 ---
 title: 'Real-Time Lightning'
 description: 'Sample article demonstrating tags, categories, and reading time'
+urlRepo: 'https://github.com/llucferrando'
 pubDate: 'Aug 08 2025'
 heroImage: '../../assets/images/example-blog-hero1.jpg'
 category: 'Showcase'

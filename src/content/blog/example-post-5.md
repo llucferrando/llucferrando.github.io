@@ -1,6 +1,7 @@
 ---
 title: 'Parchis Online TCP'
 description: 'Testing tags and category pages.'
+urlRepo: 'https://github.com/llucferrando'
 pubDate: 'Aug 08 2025'
 heroImage: '../../assets/images/example-blog-hero5.jpg'
 category: 'Showcase'
