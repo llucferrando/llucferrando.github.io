@@ -39,19 +39,19 @@ const xIcon = sanitizeToWhite(xIconRaw);
   <div class="mt-6 flex justify-center gap-3 text-sm">
 
     <Button href="mailto:llucferrandojorda@gmail.com" variant="secondary" size="md" >
-      <span class="inline-flex" aria-hidden="true" set:html={contactIcon} />
+      <div class="inline-flex mr-1" aria-hidden="true" set:html={contactIcon} />
       Mail me
     </Button>
     <Button href={SOCIAL_MEDIA.linkedin} variant="secondary" size="md" >
-      <span class="inline-flex" aria-hidden="true" set:html={ldIcon} />
+      <span class="inline-flex mr-1" aria-hidden="true" set:html={ldIcon} />
       Connect Me
     </Button>
     <Button href={SOCIAL_MEDIA.instagram} variant="secondary" size="md" >
-      <span class="inline-flex" aria-hidden="true" set:html={igIcon} />
+      <span class="inline-flex mr-1" aria-hidden="true" set:html={igIcon} />
       Send me DM
     </Button>
     <Button href={SOCIAL_MEDIA.x} variant="secondary" size="md" >
-      <span class="inline-flex" aria-hidden="true" set:html={xIcon} />
+      <span class="inline-flex mr-1" aria-hidden="true" set:html={xIcon} />
       Send me DM
     </Button>
   </div>

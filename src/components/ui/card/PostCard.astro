@@ -36,7 +36,7 @@ try {
     <div class="flex items-center gap-1 py-2">
       {post.data.tags && post.data.tags.length > 0 && (
         <div class="flex gap-2 flex-wrap">
-          {post.data.tags.map((t) => <a href={`/blog/tag/${t.replace(/\s+/g,'-').toLowerCase()}/`} class="sw-tag interactive-link no-underline">{t}</a>)}
+          {post.data.tags.map((t) => <span class="sw-tag interactive-link no-underline  transition-all hover:scale-105 border border-transparent hover:border-[color:var(--accent)] transition-colors duration-200 ">{t}</span>)}
     </div>
         )}
   <a href={`/blog/${post.id}/`} class="stretched-link" aria-label={post.data.title}></a>

@@ -1,12 +1,12 @@
 ---
 interface Props {
-  variant?: 'primary' | 'secondary' | 'ghost' | 'outline' ;
+  variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
   class?: string;
-  download?:boolean;
+  download?: boolean;
 }
 
 const {
@@ -22,20 +22,30 @@ const {
 
 const Tag = href ? 'a' : 'button';
 
-const base = 'inline-flex items-center justify-center rounded-lg font-semibold starwind-transition-colors no-underline';
+// 👇 añadimos transición global
+const base =
+  'inline-flex items-center justify-center rounded-lg font-semibold no-underline transition-all duration-200 ease-in-out';
+
 const sizes: Record<string, string> = {
   sm: 'px-3 py-2 text-sm',
   md: 'px-4 py-2.5 text-base',
   lg: 'px-10 py-5 text-lg',
 };
+
 const variants: Record<string, string> = {
-  primary: 'text-white !text-white hover:!text-white focus:!text-white active:!text-white bg-[var(--primary)] hover:opacity-90 shadow-sm',
-  secondary: 'text-[var(--accent)] border border-[var(--accent)] bg-transparent hover:bg-[color:var(--color-accent-bg)]',
-  ghost: 'text-[color:var(--color-text-secondary)] bg-transparent hover:bg-[var(--accent)]/10',
-  outline: 'text-foreground border border-[var(--border)] bg-transparent hover:bg-[color:var(--color-bg-secondary)]',
+  primary:
+    'text-white bg-[var(--primary)] hover:opacity-90 shadow-sm hover:scale-105',
+  secondary:
+    'text-[var(--accent)] border border-[var(--accent)] bg-transparent hover:bg-[color:var(--color-accent-bg)] hover:text-[color:var(--accent-light)] hover:scale-105',
+  ghost:
+    'text-[color:var(--color-text-secondary)] bg-transparent hover:bg-[var(--accent)]/10 hover:scale-105',
+  outline:
+    'text-foreground border border-[var(--border)] bg-transparent hover:bg-[color:var(--color-bg-secondary)] hover:scale-105',
 };
 
-const classes = [base, sizes[size], variants[variant], className].filter(Boolean).join(' ');
+const classes = [base, sizes[size], variants[variant], className]
+  .filter(Boolean)
+  .join(' ');
 ---
 
 <Tag
@@ -48,5 +58,3 @@ const classes = [base, sizes[size], variants[variant], className].filter(Boolean
 >
   <slot />
 </Tag>
-
-

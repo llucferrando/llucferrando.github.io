@@ -106,23 +106,16 @@ const { title, description, pubDate, updatedDate, heroImage, showHeader = true, 
                 )}
                 <div class="prose">
                     {showHeader && (
-                        <div class="title">
-                            <div class="date">
-                                <FormattedDate date={pubDate} />
-                                {
-                                    updatedDate && (
-                                        <div class="last-updated-on">
-                                            Last updated on <FormattedDate date={updatedDate} />
-                                        </div>
-                                    )
-                                }
-                            </div>
-                            <h1>{title}</h1>
-                            <hr />
+                        <div class="title mb-5">
+                            
+                            
+                            
                     </div>
 
                     )}
+					
 					<PostMeta pubDate={pubDate} readingTimeMin={readingTimeMin} authorName={Astro.props.author} />
+					<hr class="mt-8 mb-12">
                     <slot />
                 </div>
 			</article>

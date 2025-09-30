@@ -3,7 +3,8 @@
 .dark {
   /* Primary Brand Colors (Flowing Orange) */
   --accent: #568cff;
-  --accent-dark: #3d7aff;
+  --accent-dark: #1d64fe;
+  --accent-light: #81a6f4;
   --accent-rgb: 255, 138, 76;
 
   /* Neutral Colors */
@@ -16,6 +17,7 @@
   /* Semantic Color Tokens */
   --color-text-primary: rgb(var(--black));
   --color-text-secondary: rgb(var(--gray-dark));
+  --color-text-tertiary: rgb(var(--accent));
   --color-text-muted: rgb(var(--gray));
   --color-bg-primary: var(--background);
   --color-bg-secondary: rgba(255, 255, 255, 0.05);
@@ -24,6 +26,7 @@
   --color-border-light: rgba(var(--gray-light), 0.1);
   --color-accent-text: var(--accent);
   --color-accent-bg: rgba(var(--accent), 0.15);
+  --color--blue-shine:var(--accent);
 
   /* Translucent surfaces */
   --surface-100: rgba(255, 255, 255, 0.05);
@@ -69,6 +72,7 @@
   --error-foreground: #ffffff;
   /* Slightly softer borders on translucent surfaces */
   --border: var(--surface-300);
+  --border--primary:var(--accent);
   --input: var(--surface-300);
   --outline: #F97316;
 }
