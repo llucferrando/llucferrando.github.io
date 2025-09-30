@@ -5,7 +5,7 @@ urlRepo: 'https://github.com/llucferrando/CallOfDutyCompanion'
 pubDate: 'Aug 08 2025'
 heroImage: '../../assets/images/post1/radio.gif'
 category: 'Showcase'
-tags: ['OpenGL', 'C++', CleanCode, Engine Motor]
+tags: ['OpenGL', 'C++', 'CleanCode', 'Graphic Engine', 'OOP', 'SOLID']
 ---
 
 This is a sample article used in the starter template. Replace it with your own content.

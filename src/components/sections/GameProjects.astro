@@ -5,6 +5,8 @@ import ArrowSeparator from "../ui/separator/ArrowSeparator.astro";
 import ToggleButton from "../ui/button/ToggleButton.astro"; 
 import SkillsSection from "./SkillsSection.astro";
 import PostCard from "../ui/card/PostCard.astro";
+
+import PostCardVideogames from "../ui/card/PostCardVideogames.astro";
 import { getCollection } from "astro:content";
 
 const posts = await getCollection('blog');
@@ -33,8 +35,8 @@ const {title, subtitle} = Astro.props as Props;
  
     <section class="w-full flex items-center justify-center">
       <div id="gameCards" class="grid-cols-1 md:blog-grid-2 flex gap-6">
-        {firstPost && <PostCard post={firstPost}/>}
-        {secondPost && <PostCard post={secondPost}/>}
+        {firstPost && <PostCardVideogames post={firstPost}/>}
+        {secondPost && <PostCardVideogames post={secondPost}/>}
       </div>
     </section>  
 
