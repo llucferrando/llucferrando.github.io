@@ -3,7 +3,7 @@ title: 'Companion APP'
 description: 'Companion APP concept for Call Of Duty'
 urlRepo: 'https://github.com/llucferrando/CallOfDutyCompanion'
 pubDate: 'Aug 08 2025'
-heroImage: '../../assets/images/example-blog-hero2.jpg'
+heroImage: '../../assets/images/companionapp/CompanionApp.gif'
 category: 'Showcase'
 tags: ['Kotlin', 'JavaScript', Android Studio, API, ]
 ---
