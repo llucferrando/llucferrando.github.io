@@ -1,4 +1,4 @@
-import avatar from 'public/cv/fotoCV.jpg';
+import avatar from 'public/fotoCV.jpg';
 
 export const author = {
   name: 'Lluc Ferrando Jordà',
