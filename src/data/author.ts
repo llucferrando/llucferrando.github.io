@@ -1,8 +1,8 @@
-import avatar from 'public/fotoCV.jpg';
+import avatar from '../assets/fotoCV.jpg';
 
 export const author = {
   name: 'Lluc Ferrando Jordà',
-  authorProf:'Software Engineer',
+  authorProf: 'Software Engineer',
   avatar,
   url: '#',
 };
