@@ -1,18 +1,26 @@
 ---
-import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/sections/Footer.astro';
+import Button from '@/components/ui/button/Button.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/sections/Header.astro';
 import PostMeta from '../components/ui/meta/PostMeta.astro';
+import Carousel from '../components/ui/carousel/Carousel.astro'
 import ShareButtons from '../components/ui/share/ShareButtons.astro';
 import PostNav from '../components/ui/nav/PostNav.astro';
+import ArrowSeparator from '@/components/ui/separator/ArrowSeparator.astro';
+import SkillsSection from '@/components/sections/SkillsSection.astro';
+
+//Data
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { logos } from "../data/logos";
+
 
 type BlogData = CollectionEntry<'blog'>['data'];
 type Props = BlogData & { showHeader?: boolean; prevPost?: { id: string; title: string } | null; nextPost?: { id: string; title: string } | null; readingTimeMin?: number };
 
-const { title, description, pubDate, updatedDate, heroImage, showHeader = true, prevPost = null, nextPost = null, readingTimeMin = 0 } = Astro.props as Props;
+const { title, description, urlRepo ,pubDate, updatedDate, heroImage, showHeader = true, prevPost = null, nextPost = null, readingTimeMin = 0 } = Astro.props as Props;
 ---
 
 <html lang="en" data-theme="dark" class="dark">
@@ -100,7 +108,7 @@ const { title, description, pubDate, updatedDate, heroImage, showHeader = true, 
 		<main>
 			<article>
                 {showHeader && (
-                    <div class="hero-image">
+                    <div class="hero-imagef">
                         {heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
                     </div>
                 )}
@@ -113,12 +121,24 @@ const { title, description, pubDate, updatedDate, heroImage, showHeader = true, 
                     </div>
 
                     )}
-					
 					<PostMeta pubDate={pubDate} readingTimeMin={readingTimeMin} authorName={Astro.props.author} />
 					<hr class="mt-8 mb-12">
                     <slot />
+					<div class="items-center mt-20">
+						
+
+						<div class="items-center">
+						<Button size="md" href={urlRepo} class="flex items-center gap-1" variant='secondary'> View Repo <class>
+							  </class> <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="transition-colors group-hover:text-[color:var(--accent)]">
+							  <path fill="currentColor" 
+							  d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.41 7.86 10.94.58.11.79-.25.79-.56v-2.03c-3.2.69-3.87-1.37-3.87-1.37-.53-1.36-1.3-1.72-1.3-1.72-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.72 0-1.27.45-2.31 1.19-3.13-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.19.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.21-1.5 3.18-1.19 3.18-1.19.63 1.59.23 2.76.11 3.05.74.82 1.19 1.86 1.19 3.13 0 4.45-2.68 5.43-5.24 5.72.42.36.79 1.08.79 2.18v3.24c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg> 
+						</Button>
+						</div>
+					</div>
                 </div>
 			</article>
+			<ArrowSeparator class="mt-20"></ArrowSeparator>
+			<Footer></Footer>
 		</main>
 	
 	</body>

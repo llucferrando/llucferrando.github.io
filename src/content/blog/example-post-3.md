@@ -1,13 +1,24 @@
 ---
-title: 'Web Game Phaser'
+title: 'Phaser Web Game Development'
 description: 'Sample article demonstrating tags, categories, and reading time.'
-urlRepo: 'https://github.com/llucferrando'
+urlRepo: 'https://github.com/llucferrando/metodologies-agils'
 pubDate: 'Aug 08 2025'
 heroImage: '../../assets/images/example-blog-hero2.jpg'
 category: 'Design'
-tags: ['OpenGL', 'C++', CleanCode, Engine Motor]
+tags: ['Phaser', 'Javascript', 'OOP', 'Visual Studio Code']
 ---
 
-Short sample content. Replace with your own.
+<div class="text-justify center">
+  <h2 class="font-extrabold">
+    WEB GAME DEVELOPMENT - PHASER
+  </h2>
+  <p class="mt-10">
+
+  > Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
+ 
+ 
+  
+  </p>
+</div>
 
 
