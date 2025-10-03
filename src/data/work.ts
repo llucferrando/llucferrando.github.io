@@ -11,73 +11,33 @@ export const workIcons = {
 
 export const work = [
   {
-    title: "Senior Kiko Software Engineer",
-    company: "Acme Cloud",
-    region: "United States",
+    title: "Tennis Coach",
+    company: "TopTen Tennis Academy",
+    region: "Catalonia, Spain",
     description:
-      "Led the design and delivery of a multi‑tenant platform, decomposed critical monolith paths into services, improved p95 latency by 40%, defined SLOs and on‑call rotations, and mentored junior engineers.",
+      "Coached players of all ages during summer, Easter, and Christmas programs as well as weekends. Developed training sessions focused on discipline, resilience, and problem-solving. Coordinated group activities and acted as mediator in team environments, strengthening communication and leadership skills.",
     technologies: [
-      "TypeScript",
-      "Node.js",
-      "React",
-      "PostgreSQL",
-      "Redis",
-      "AWS",
-      "Docker",
-      "Kubernetes",
-      "Terraform",
-      "GraphQL",
+      "Coaching",
+      "Leadership",
+      "Teamwork",
+      "Problem-Solving",
+      "Conflict Resolution",
     ],
   },
   {
-    title: "Staff Software Engineer",
-    company: "FinchPay",
-    region: "Global",
+    title: "Machining Assistant to Lathe Operator",
+    company: "Mecanitzats Jordà",
+    region: "Catalonia, Spain",
     description:
-      "Architected event‑driven payment services with idempotency and retries, introduced Kafka for async processing, enforced API versioning, and drove observability with structured logging and tracing.",
+      "Assisted machining tasks by filing and finishing metal and plastic parts. Contributed to the production of plastic components for a boat project using a lathe. Learned to operate precision tools and ensured quality standards in manufacturing processes.",
     technologies: [
-      "TypeScript",
-      "NestJS",
-      "Kafka",
-      "PostgreSQL",
-      "Redis",
-      "gRPC",
-      "OpenTelemetry",
-      "AWS",
-    ],
-  },
-  {
-    title: "Senior Frontend Engineer",
-    company: "Insight Analytics",
-    region: "Europe",
-    description:
-      "Owned the design system and SSR/ISR strategy, improved Core Web Vitals (LCP/INP) into the green, and shipped accessible UI components with strong tests and story coverage.",
-    technologies: [
-      "React",
-      "Next.js",
-      "Astro",
-      "Tailwind CSS",
-      "Playwright",
-      "Vitest",
-    ],
-  },
-  {
-    title: "Software Engineer",
-    company: "LaunchPad",
-    region: "Brazil",
-    description:
-      "Built MVPs end‑to‑end: designed REST/GraphQL APIs, set up CI/CD with preview environments, introduced feature flags, and migrated data to Postgres.",
-    technologies: [
-      "Node.js",
-      "Express",
-      "GraphQL",
-      "Supabase",
-      "PostgreSQL",
-      "GitHub Actions",
-      "Docker",
+      "Machining",
+      "Lathe Operation",
+      "Manufacturing Processes",
+      "Attention to Detail",
+      "Team Collaboration",
     ],
   },
 ];
 
 export type WorkItem = (typeof work)[number];
-

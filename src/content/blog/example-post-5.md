@@ -34,7 +34,6 @@ tags: ['C++','MySQL','SFML','Visual Studio','HeidiSQL','Online','TCP','OOP','SOL
 
 
 </div>  
-  
   <div id="BELOW DESCRIPTION" class="mt-10 flex justify-start gap-20">
     <div id="SKILLS">
       <h4 class="font-bold text-start">SKILLS</h4>

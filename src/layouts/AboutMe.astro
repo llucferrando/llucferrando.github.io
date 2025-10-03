@@ -1,126 +1,76 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/sections/Footer.astro';
-import Button from '@/components/ui/button/Button.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/sections/Header.astro';
-import PostMeta from '../components/ui/meta/PostMeta.astro';
-import Carousel from '../components/ui/carousel/Carousel.astro'
-import ShareButtons from '../components/ui/share/ShareButtons.astro';
-import PostNav from '../components/ui/nav/PostNav.astro';
-import ArrowSeparator from '@/components/ui/separator/ArrowSeparator.astro';
-import SkillsSection from '@/components/sections/SkillsSection.astro';
+import HeroSection from '@/components/sections/HeroSection.astro';
+import avatar from '../assets/images/FOTO-CV-EDITED.png'; 
 
-//Data
-import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
-import { logos } from "../data/logos";
-import GlowLineSeparator from '@/components/ui/separator/GlowLineSeparator.astro';
-
-
-type BlogData = CollectionEntry<'blog'>['data'];
-type Props = BlogData & { showHeader?: boolean; prevPost?: { id: string; title: string } | null; nextPost?: { id: string; title: string } | null; readingTimeMin?: number };
-
-const { title, description, urlRepo ,pubDate, updatedDate, heroImage, showHeader = true, prevPost = null, nextPost = null, readingTimeMin = 0 } = Astro.props as Props;
+import tennis from '../assets/images/tennis.jpg'
 ---
 
-<html lang="en" data-theme="dark" class="dark">
-	<head>
-		<BaseHead title={title} description={description} image={heroImage} />
-		<meta property="og:type" content="article" />
-		<!-- Article specific OG meta -->
-		{pubDate && <meta property="article:published_time" content={new Date(pubDate).toISOString()} />}
-		{updatedDate && <meta property="article:modified_time" content={new Date(updatedDate).toISOString()} />}
-		<meta property="article:author" content={Astro.props.author || 'Site Author'} />
-		{Array.isArray(Astro.props.tags) && Astro.props.tags.map((t) => (
-		  <meta property="article:tag" content={t} />
-		))}
+<HeroSection title='ABOUT ME'></HeroSection>
+<section id="about" class="px-6 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
+  <!-- Imagen superior solo en móvil -->
+  <div class="flex justify-center md:hidden">
+    <img 
+      src={avatar.src} 
+      alt="Lluc Ferrando" 
+      class="w-40 h-40 rounded-lg object-cover shadow-lg"
+    />
+  </div>
 
-		<!-- JSON-LD: Article -->
-		<script type="application/ld+json" set:html={JSON.stringify({
-		  '@context': 'https://schema.org',
-		  '@type': 'Article',
-		  headline: title,
-		  description,
-		  image: Astro.props.heroImage ? new URL(Astro.props.heroImage.src, Astro.site).toString() : undefined,
-		  datePublished: pubDate ? new Date(pubDate).toISOString() : undefined,
-		  dateModified: updatedDate ? new Date(updatedDate).toISOString() : undefined,
-		  author: [{ '@type': 'Person', name:'Lluc Ferrando' }],
-		  publisher: { '@type': 'Organization', name: 'www.llucferrando.github.io' },
-		  mainEntityOfPage: new URL(Astro.url.pathname, Astro.site).toString(),
-		  url: new URL(Astro.url.pathname, Astro.site).toString(),
-		})} />
-    
-		<!-- JSON-LD: Breadcrumbs -->
-		<script type="application/ld+json" set:html={JSON.stringify({
-		  '@context': 'https://schema.org',
-		  '@type': 'BreadcrumbList',
-		  itemListElement: [
-		    { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).toString() },
-		    { '@type': 'ListItem', position: 2, name: 'Blog', item: new URL('/blog/', Astro.site).toString() },
-		    { '@type': 'ListItem', position: 3, name: title, item: new URL(Astro.url.pathname, Astro.site).toString() },
-		  ],
-		})} />
-		<style>
-				main {
-					width: 1280px;
-					max-width: calc(100% - 2em);
-					margin: auto;
-					background: var(--color-bg-primary);
-				}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-				.prose {
-					width: 100%;
-					max-width: 870px; /* widen column */
-					margin: auto;
-					padding: 0.05em;
-					color: var(--color-text-secondary);
-				}
-            .title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-                margin: 0 0 0.5em 0;
-                color: var(--color-text-primary);
-			}
-			.date {
-                margin-bottom: 0.5em;
-                color: var(--color-text-muted);
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
-	</head>
+  <!-- Columna izquierda (solo en desktop) -->
+  <div class="hidden md:flex flex-col gap-4 items-center">
+    <img 
+      src={avatar.src} 
+      alt="Lluc Ferrando" 
+      class="w-40 h-40 md:w-43 md:h-43 rounded-lg object-cover shadow-lg"
+    />
+    <img 
+      src={tennis.src}
+      alt="Lluc Ferrando" 
+      class="w-40 h-40 md:w-43 md:h-43 rounded-lg object-cover shadow-lg"
+    />
+  </div>
 
-	<body>
-		<Header />
-		<main>
-			<article>
-			<PostMeta pubDate={pubDate} readingTimeMin={readingTimeMin} authorName={Astro.props.author} />
-			<hr class="mt-8 mb-12">
-            <slot />
-			<div class="mx-auto mt-60 mb-60 flex justify-center">
-			<img src={Astro.props.heroImage?.src} 
-				alt="blog placeholder" 
-				class="mx-auto scale-195" />
-			</div>
+  <!-- Texto -->
+  <div class="flex-1 text-center md:text-left ">
+    <p class="text-base md:text-md text-[color:var(--color-text-secondary)] leading-relaxed text-justify">
+      I am a passionate <strong>software and game developer</strong>, currently finishing my 
+      <strong>Bachelor’s Degree in Video Game Design and Development</strong> at the University of Barcelona (ENTI). 
+      My academic and personal projects span from building <strong>custom graphic engines</strong> in <strong>C++</strong> and 
+      <strong>OpenGL</strong>, to developing <strong>multiplayer systems</strong> with <strong>network programming</strong>, and 
+      designing modern <strong>web applications</strong> with <strong>JavaScript</strong>, <strong>TypeScript</strong>, and <strong>Astro</strong>. 
+      I strongly apply <strong>Object-Oriented Programming (OOP)</strong>, <strong>SOLID principles</strong>, and <strong>Agile methodologies</strong> 
+      to ensure clean, scalable, and maintainable solutions.
+    </p>
+    <p class="text-base md:text-md text-[color:var(--color-text-secondary)] leading-relaxed text-justify mt-4">
+      Beyond the technical side, my journey as a <strong>tennis coach</strong> has been fundamental in shaping my soft skills. 
+      Teaching and managing groups of children of all ages allowed me to grow as a <strong>problem-solver</strong>, since tennis 
+      is a sport defined by constant mistakes and challenges. Acting not only as a coach, but also as a 
+      <strong>mediator</strong> and <strong>coordinator</strong>, strengthened my abilities in <strong>leadership</strong>, 
+      <strong>communication</strong>, and <strong>conflict resolution</strong>.
+    </p>
+    <p class="text-base md:text-md text-[color:var(--color-text-secondary)] leading-relaxed text-justify mt-4">
+      Sports are an essential part of my life and identity. I competed in <strong>tennis for over 15 years</strong>, 
+      and when I decided to stop, I immediately transitioned into <strong>padel competitions</strong>. 
+      For me, <strong>competition is not an obligation, but a lifestyle</strong>—a way to cultivate <strong>discipline</strong>, 
+      <strong>resilience</strong>, and <strong>ambition</strong>. Facing challenges on the court has taught me to approach 
+      professional and personal projects with the same mindset: to never settle, to analyze problems strategically, 
+      and to embrace them as opportunities to improve.
+    </p>
+    <p class="text-base md:text-md text-[color:var(--color-text-secondary)] leading-relaxed text-justify mt-4">
+      This unique combination of <strong>technical expertise</strong> and <strong>sports-driven values</strong> defines how I work: 
+      ambitious, structured, adaptable, and always motivated to push limits—whether in <strong>software development</strong>, 
+      <strong>game design</strong>, or any <strong>team endeavor</strong> I join.
+    </p>
 
-			</article>
-			<GlowLineSeparator class="mt-30"></GlowLineSeparator>
-			<Footer></Footer>
-		</main>
-	
-	</body>
-</html>
+    <!-- Imagen inferior solo en móvil -->
+  <div class="flex justify-center md:hidden mt-6">
+    <img 
+      src={tennis.src} 
+      alt="Lluc Ferrando - Tennis" 
+      class="w-40 h-40 rounded-lg object-cover shadow-lg"
+    />
+  </div>
+  </div>
+</section>
+
+

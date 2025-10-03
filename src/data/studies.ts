@@ -1,30 +1,41 @@
 export const studies = [
   {
-    title: "B.S. in Computer Science",
-    institution: "State University",
+    title: "Bachelor’s Degree in Video Game Design and Development",
+    institution: "University of Barcelona – ENTI",
     description:
-      "Core CS foundations: data structures, algorithms, operating systems, networking, and databases; team capstone in web systems.",
+      "Engineering-oriented program focused on the design, programming, and production of video games. Strong emphasis on graphics programming, game engines, applied games, and multidisciplinary teamwork.",
     tags: [
-      "Algorithms",
-      "Data Structures",
-      "Operating Systems",
-      "Databases",
-      "Networking",
+      "C++",
+      "OpenGL",
+      "Unity",
+      "Unreal Engine",
+      "Game Design",
+      "Project Management",
     ],
   },
   {
-    title: "M.S. in Software Engineering",
-    institution: "Tech Institute",
+    title: "Tech Baccalaureate",
+    institution: "St. Elm St. Feliu de Guíxols High School",
     description:
-      "Focus on distributed systems, testing strategies, and cloud architecture; thesis on resilience patterns in microservices.",
+      "Pre-university program with a strong technical focus, providing foundations in mathematics, physics, and computer science.",
     tags: [
-      "Distributed Systems",
-      "Cloud Architecture",
-      "Testing",
-      "Microservices",
+      "Mathematics",
+      "Physics",
+      "Computer Science",
+      "Problem-Solving",
+    ],
+  },
+  {
+    title: "B2 Certificate – English",
+    institution: "Cambridge School, Girona",
+    description:
+      "English language proficiency certified at B2 level according to the Common European Framework of Reference (CEFR).",
+    tags: [
+      "English",
+      "Communication",
+      "Language Proficiency",
     ],
   },
 ];
 
 export type StudyItem = (typeof studies)[number];
-
