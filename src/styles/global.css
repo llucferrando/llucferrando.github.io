@@ -70,6 +70,7 @@ h5 {
 strong,
 b {
 	font-weight: 700;
+	color:var(--accent);
 }
 a:not(.sw-btn):not(.sw-btn-sm):not(.no-underline) {
     color: var(--accent);

@@ -1,4 +1,4 @@
-import avatar from '../assets/images/cvphoto.jpg'
+import avatar from '../assets/images/FOTO-CV-EDITED.png'
 
 export const author = {
   name: 'Lluc Ferrando Jordà',
