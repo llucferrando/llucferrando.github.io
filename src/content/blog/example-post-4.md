@@ -9,7 +9,7 @@ tags: ['Unity', 'HLSL', 'Graphics', 'Gitflow']
 ---
 <div class="text-justify center">
   <div id="DESCRIPTION" class="mt-7">
-    <blockquote class="!text-[22px]">
+    <blockquote class="md:text-[22px]">
       <p>
         This project explores the creation and implementation of <strong>custom shaders</strong> using <strong>HLSL</strong> within the <strong>Unity</strong> engine. The objective was to gain a deeper understanding of how real-time graphics pipelines handle shading and to experiment with a variety of visual effects.
       </p>

@@ -12,7 +12,7 @@ tags: ['OpenGL', 'C++', 'C','Custom Graphic Engine', 'OOP', 'SOLID', 'Gitflow']
 
   <div class="mb-12"><h2 class="font-extrabold"> CUSTOM GRAPHIC ENGINE IN OPENGL </h2><div>
   <div id="DESCRIPTION" class="mt-7">
-  <blockquote class="!text-[22px]">
+  <blockquote class="md:text-[22px]">
   <p>
     This project consists of the implementation of a <strong>custom graphic engine</strong> using <strong>C++</strong>, <strong>OpenGL</strong>, and <strong>Visual Studio</strong>. The main objective was to design a small interactive scene where the focus lies on <strong>real-time illumination</strong> and the simulation of a day–night cycle.
   </p>

@@ -12,7 +12,7 @@ tags: ['C++','MySQL','SFML','Visual Studio','HeidiSQL','Online','TCP','OOP','SOL
 
   <div class="mb-10"><h2 class="font-extrabold"> PARCHIS ONLINE WITH TCP PROTOCOL </h2><div>
   <div id="DESCRIPTION" class="mt-7">
-  <blockquote class="!text-[22px]">
+  <blockquote class="md:text-[22px]">
   <p>
     This project consists of the development of <strong>Parchís Online TCP</strong>, a networked version of the classic board game implemented in <strong>C++</strong> using <strong>SFML</strong> for rendering and <strong>TCP sockets</strong> for communication. The goal was to combine traditional gameplay with a functional <strong>online system</strong>, providing a complete multiplayer experience.
   </p>

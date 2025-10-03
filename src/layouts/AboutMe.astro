@@ -107,18 +107,18 @@ const { title, description, urlRepo ,pubDate, updatedDate, heroImage, showHeader
 	<body>
 		<Header />
 		<main>
-			<article class="prose !text-[12px] md:text-base lg:text-lg">
+			<article>
 			<PostMeta pubDate={pubDate} readingTimeMin={readingTimeMin} authorName={Astro.props.author} />
 			<hr class="mt-8 mb-12">
-			<slot />
+            <slot />
 			<div class="mx-auto mt-60 mb-60 flex justify-center">
-				<img src={Astro.props.heroImage?.src} 
-					alt="blog placeholder" 
-					class="mx-auto scale-195" />
+			<img src={Astro.props.heroImage?.src} 
+				alt="blog placeholder" 
+				class="mx-auto scale-195" />
 			</div>
-			</article>
 
-			<GlowLineSeparator class="mt-2 md:mt-30"></GlowLineSeparator>
+			</article>
+			<GlowLineSeparator class="mt-30"></GlowLineSeparator>
 			<Footer></Footer>
 		</main>
 	

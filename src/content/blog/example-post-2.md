@@ -5,14 +5,14 @@ urlRepo: 'https://github.com/llucferrando/CallOfDutyCompanion'
 pubDate: 'Aug 08 2025'
 heroImage: '../../assets/images/companionapp/CompanionApp.gif'
 category: 'Showcase'
-tags: ['Kotlin','JavaScript', Android Studio, 'API', 'Firebase', 'Gitflow']
+tags: ['Kotlin','JavaScript', Android Studio, 'API', 'Firebase', ]
 ---
 
 <div class="text-justify center">
 
   <div class="mb-10"><h2 class="font-extrabold"> CALL OF DUTY COMPANION APP </h2><div>
   <div id="DESCRIPTION" class="mt-7">
-  <blockquote class="!text-[22px]">
+  <blockquote class="md:text-[22px]">
   <p>
     This project consists of the development of a <strong>Call of Duty Companion App</strong> built with <strong>Kotlin</strong>, <strong>JavaScript</strong>, and <strong>Android Studio</strong>. The objective was to design an application that allows players to stay connected with the game by checking the latest <strong>news</strong>, interacting with the <strong>community</strong>, and accessing essential information in real time.
   </p>

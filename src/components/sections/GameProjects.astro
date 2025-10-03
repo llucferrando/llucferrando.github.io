@@ -34,7 +34,7 @@ const {title, subtitle} = Astro.props as Props;
   </div>
  
     <section class="w-full flex items-center justify-center">
-      <div id="gameCards" class="grid-cols-1 md:blog-grid-2 flex gap-6">
+      <div id="gameCards" class="grid grid-cols-1 md:blog-grid-2 flex gap-6">
         {firstPost && <PostCardVideogames post={firstPost}/>}
         {secondPost && <PostCardVideogames post={secondPost}/>}
        
