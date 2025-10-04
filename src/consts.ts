@@ -1,6 +1,6 @@
 //Constant to import from anywhere in the project
 
-export const SITE_TITLE = 'Lluc Ferrando – Personal Portfolio';
+export const SITE_TITLE = 'Lluc Ferrando Jordà work Portfolio';
 export const SITE_DESCRIPTION = 'Personal portfolio of Lluc Ferrando – software and game developer. From custom engines in C++ to Unity and web projects, exploring creativity through code and technology.';
 
 
